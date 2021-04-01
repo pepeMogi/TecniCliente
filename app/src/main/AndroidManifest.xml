@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.tecniprint.tecniprintcliente">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/cuadro"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Recepcion">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="tecniprintcliente.page.link"
+                    android:scheme="https"/>
+                <data
+                    android:host="tecniprintcliente.page.link"
+                    android:scheme="http"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".otros.MyWelcomeActivity"
+            android:theme="@style/CustomWelcomeScreenTheme" />
+    </application>
+
+</manifest>
